@@ -7,8 +7,7 @@
 
         <h2>id：${tasks.id}のメッセージ詳細ページ</h2>
 
-        <p>タイトル：<c:out value="${tasks.title}" /></p>
-        <p>メッセージ：<c:out value="${tasks.content}" /></p>
+        <p>タスクの内容：<c:out value="${tasks.content}" /></p>
         <p>作成日時：<fmt:formatDate value="${tasks.created_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
         <p>更新日時：<fmt:formatDate value="${tasks.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
 

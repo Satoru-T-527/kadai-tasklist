@@ -29,15 +29,12 @@ public class CreateServlet extends HttpServlet {
 
             Message m = new Message();
 
-            String title = request.getParameter("title");
-            m.setTitle(title);
-
-            String content = request.getParameter("content");
-            m.setContent(content);
-
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             m.setCreated_at(currentTime);
             m.setUpdated_at(currentTime);
+
+            String content = request.getParameter("content");
+            m.setContent(content);
 
             em.getTransaction().begin();
             em.persist(m);

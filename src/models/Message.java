@@ -26,17 +26,14 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title", length = 255, nullable = false)
-    private String title;
-
-    @Column(name = "content", length = 255, nullable = false)
-    private String content;
-
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
 
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
+
+    @Column(name = "content", length = 255, nullable = false)
+    private String content;
 
     public Integer getId() {
         return id;
@@ -44,14 +41,6 @@ public class Message {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getContent() {

@@ -32,14 +32,11 @@ public class UpdateServlet extends HttpServlet {
             Message m = em.find(Message.class, (Integer)(request.getSession().getAttribute("tasks_id")));
 
             //フォームの内容を各フィールドに上書き
-            String title = request.getParameter("title");
-            m.setTitle(title);
+            Timestamp currentTime = new Timestamp(System.currentTimeMillis());
+            m.setUpdated_at(currentTime);
 
             String content = request.getParameter("content");
             m.setContent(content);
-
-            Timestamp currentTime = new Timestamp(System.currentTimeMillis());
-            m.setUpdated_at(currentTime);
 
             //データベースを更新
             em.getTransaction().begin();

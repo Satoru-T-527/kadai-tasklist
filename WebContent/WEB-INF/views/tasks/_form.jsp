@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<label for="title">タイトル</label><br />
-<input type="text" name="title" value="${tasks.title}" />
-<br /><br />
 
-<label for="content">メッセージ</label><br />
+<label for="content">タスクの内容</label><br />
 <input type="text" name="content" value="${tasks.content}" />
 <br /><br />
 
